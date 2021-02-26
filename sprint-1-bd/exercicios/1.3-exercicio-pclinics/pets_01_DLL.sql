@@ -1,0 +1,56 @@
+CREATE DATABASE Pets;
+
+USE Pets;
+
+CREATE TABLE Clinicas
+(
+	idClinica INT PRIMARY KEY IDENTITY,
+	RazaoSocial VARCHAR(80) NOT NULL,
+	Cnpj INT NOT NULL,
+	Endereco VARCHAR(80) NOT NULL
+);
+
+CREATE TABLE TiposPets
+(
+	idTipoPet INT PRIMARY KEY IDENTITY,
+	Descricao VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Racas
+(
+	idRaca INT PRIMARY KEY IDENTITY,
+	Descricao VARCHAR(50) NOT NULL,
+	idTipoPet INT FOREIGN KEY REFERENCES TiposPets(idTipoPet)
+);
+
+CREATE TABLE Veterinarios
+(
+	idVeterinario INT PRIMARY KEY IDENTITY,
+	Nome VARCHAR(50) NOT NULL,
+	Crmv INT NOT NULL,
+	idClinica INT FOREIGN KEY REFERENCES Clinicas(idClinica)
+);
+
+CREATE TABLE Donos
+(
+	idDono INT PRIMARY KEY IDENTITY,
+	Nome VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Pets
+(
+	idPet INT PRIMARY KEY IDENTITY,
+	Nome VARCHAR(50) NOT NULL,
+	dataNascimento DATETIME NOT NULL,
+	idRaca INT FOREIGN KEY REFERENCES Racas(idRaca),
+	idDono INT FOREIGN KEY REFERENCES Donos(idDono)
+);
+
+CREATE TABLE Atendimentos
+(
+	idAtendimento INT PRIMARY KEY IDENTITY,
+	Descricao VARCHAR(50) NOT NULL,
+	dataAtendimento DATETIME NOT NULL,
+	idVeterinario INT FOREIGN KEY REFERENCES Veterinarios(idVeterinario),
+	idPet INT FOREIGN KEY REFERENCES Pets(idPet)
+);
