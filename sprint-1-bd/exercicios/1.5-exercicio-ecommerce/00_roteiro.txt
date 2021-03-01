@@ -5,3 +5,9 @@ Uma categoria possui subcategorias
 Um produto possui uma subcategoria
 Um cliente efetua um pedido
 Um pedido pode ter 1 ou vários produtos
+
+DQL
+
+1- listar todos os pedidos de um cliente (nome), mostrando quais produtos foram solicitados (titulo) neste pedido e de qual subcategoria (nome) e categoria (nome) pertencem
+
+obs: faltou fazer o 1

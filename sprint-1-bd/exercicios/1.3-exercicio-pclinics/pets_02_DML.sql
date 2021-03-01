@@ -7,11 +7,19 @@ VALUES ('PetLove',123,'Rua Abacaxi, 900'),
 INSERT INTO TiposPets(Descricao)
 VALUES ('Cachorro'),('Gato'),('Pássaro');
 
+INSERT INTO TiposPets(Descricao)
+Values ('tartaruga'),('peixe');
+
 INSERT INTO Racas(Descricao,idTipoPet)
 VALUES ('Poodle', 1),
 	   ('Labrador', 1),
 	   ('Siamês', 2),
 	   ('Maritaca', 3);
+
+INSERT INTO Racas(Descricao, idTipoPet)  
+VALUES ('Sabiá', 3),
+	   ('Sabugueiro', 1),
+	   ('Sinaloa', 2);
 
 INSERT INTO Veterinarios(Nome,Crmv,idClinica)
 VALUES ('Felipe', 333, 1),
@@ -32,3 +40,4 @@ VALUES ('Estado Crítico', 01/01/2001, 1, 1),
 	   ('Situação Estável', 02/02/2002, 2, 2),
 	   ('Aguardando Cirurgia', 03/03/2003, 3, 3),
 	   ('Estado Estável', 04/04/2004, 3, 4);
+

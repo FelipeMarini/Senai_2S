@@ -6,3 +6,12 @@ Observações:
 Os Artistas deverão possuir somente nome.
 Estilos: nome.
 Albuns: titulo, data de lançamento, localizacao, quantidade de minutos, se o álbum está ativo para visualização, a quem pertence (somente um artista por álbum) e quais os estilos vinculados.
+
+DQL
+
+1- listar todos os usuários administradores, sem exibir suas senhas
+2- listar todos os álbuns lançados após o um determinado ano de lançamento
+3- listar os dados de um usuário através do e-mail e senha
+4- listar todos os álbuns ativos, mostrando o nome do artista e os estilos do álbum
+
+obs: só falta fazer o 4 mostrando mais de um estilo (se o álbum tiver mais de um estilo)
